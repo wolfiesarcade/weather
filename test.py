@@ -13,7 +13,6 @@ response = requests.get(url)
 if response.status_code == 200:
 
     data = response.json()
-    print(data)
 
     # Extract the relevant information from the response
     temperature = data['main']['temp']
