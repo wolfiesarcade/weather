@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .weather-tab-container{
+                background-color: lightblue;
+                display: flex;
+                flex-direction: column;
+                width: 350px;
+                height: 500px;
+                position: absolute;
+                top: 20%;
+                left: 40%;
+                right: 40%;
+                bottom: 20%;
+                border-color: black;
+                border-width: 1px;
+                border-style: solid;
+                border-radius:10px ;
+            }
+            .searchbox-container{
+                background-color: red;
+                height: 40px;
+                margin-top: 10px;
+                display:flex;
+                margin-bottom: 15px;
+
+            }
+            .searchbox{
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                text-align: center;
+                color: black;
+                height: 30px;
+                width: 90%;
+                border-radius: 15px;
+                border-style:double;
+                border-width: 2px;
+            }
+            .date-time-container{
+                display: flex;
+                flex-direction: row;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 15px;
+            }
+            .date{
+                background-color: aqua;
+                width: 50%;
+                text-align: center;
+            }
+            .time{
+                background-color: rgb(230, 170, 170);
+                width: 50%;
+                text-align: center;
+                
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="weather-tab-container">
+            <div class="searchbox-container">
+                <input class="searchbox" placeholder="enter a city">
+            </div>
+            <div class="date-time-container">
+                <div class="date">
+                    date
+                </div>
+                <div class="time">time</div>
+            </div>
+            <div class="current-weather-info">
+                <div class="current-weather">
+                    api dependent/ you need a picture here 
+                </div>
+            </div>
+            <div class="temperature">
+                <div class="main-temperature">api</div>
+                <div class="farhenheit">api</div>
+                <div class="peters-metric">api</div>
+                just let me commit
+            </div>
+        </div>
+        
+    </body>
+</html>
