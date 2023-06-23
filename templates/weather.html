@@ -3,7 +3,8 @@
     <head>
         <style>
             body{
-                font-family: Helvetica;
+                font-family: 'Helvetica Neue', sans-serif;
+                                                
             }
             .weather-tab-container{
                 background-color: beige;
@@ -20,7 +21,7 @@
                 border-width: 1px;
                 border-style: none;
                 border-radius:10px ;
-                box-shadow: 0px 1px 4px rgb(146, 146, 146);
+                box-shadow: 1px 1px 4px rgb(146, 146, 146);
             }
             .searchbox-container{
                 background-color: red;
@@ -61,7 +62,7 @@
                 
             }
             .current-weather-info{
-                border-style: solid;
+                border-style: none;
                 border-color: rgb(0, 0, 0);
                 border-width: 1px;
                 border-radius:10px ;
@@ -70,6 +71,8 @@
                 margin-right: 10px;
                 margin-bottom: 15px;
                 height: 250px;
+                box-shadow: 1px 1px 4px rgb(178, 178, 178);
+                text-shadow: 0px 0px 1px rgb(207, 207, 207);
 
             }
             .current-weather-picture{
@@ -85,6 +88,7 @@
                 height: 190px;
             }
             .current-city{
+                background-color: blue;
                 display: block;
                 font-weight: bold;
             }
@@ -99,9 +103,12 @@
 
                 display: flex;
                 flex-direction: row;
-                margin-top: 10px;
+                margin-top: 8px;
                 font-weight: bold;
 
+            }
+            .divider{
+                margin-top: 8px;
             }
 
             .farhenheit{
@@ -134,6 +141,7 @@
                 <div class="current-city">{{weather.city}}</div>
                 <div class="temperature">
                     <div class="farhenheit">{{farh}}&deg;F</div>
+                    <div class="divider">&#124;</div>
                     <div class="celcius">{{celsius}}&deg;C</div>
                     </div>
                 </div>
