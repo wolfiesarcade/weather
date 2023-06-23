@@ -1,5 +1,6 @@
 import requests
 from icons import icons, icon_dictionary
+from videos import video, video_dictionary
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
@@ -28,6 +29,7 @@ def index():
         description = data["weather"][0]["description"]
         icondata = data["weather"][0]["icon"]
         iconexecute=icons(icondata)
+        videoexecute=video(icondata)
 
         # Print the weather information
         weather = {
