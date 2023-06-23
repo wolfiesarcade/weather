@@ -1,4 +1,5 @@
 import requests
+from icons import icons, icon_dictionary
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
@@ -21,20 +22,23 @@ def index():
 
         # Extract the relevant information from the response
         temperature = data["main"]["temp"]
+        farh= int((temperature - 273.15) * 9 // 5 + 32)
+        celsius = int(temperature - 273.15)
         humidity = data["main"]["humidity"]
         description = data["weather"][0]["description"]
-        icon= data["weather"][0]["icon"]
+        icondata = data["weather"][0]["icon"]
+        iconexecute=icons(icondata)
 
         # Print the weather information
         weather = {
-            'city': city,
-            'Temperature': temperature,
-            'Humidity': humidity,
-            'Description': description,
-            'icon' :  icon 
+            "city": city,
+            "Temperature": temperature,
+            "Humidity": humidity,
+            "Description": description,
+            "icon": icondata,
         }
         print(weather)
     else:
         print("Error:", response.status_code)
 
-    return render_template("weather.html", weather=weather)
+    return render_template("weather.html", weather=weather, celsius=celsius, farh=farh, temperature=temperature, iconexecute=iconexecute)
