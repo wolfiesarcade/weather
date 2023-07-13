@@ -44,3 +44,8 @@ def index():
         print("Error:", response.status_code)
 
     return render_template("weather.html", weather=weather, celsius=celsius, farh=farh, temperature=temperature, iconexecute=iconexecute)
+
+
+@app.route("/result/<cityname>")
+def cityName(cityname):
+    return render_template("city.html", cityname=cityname)
