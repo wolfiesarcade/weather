@@ -1,7 +1,155 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="weather.css">
+    <style>
+    body{
+        font-family: 'Helvetica Neue', sans-serif;
+                                        
+    }
+    .weather-tab-container{
+        background-color: rgb(255, 253, 253);
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 500px;
+        position: absolute;
+        top: 20%;
+        left: 40%;
+        right: 40%;
+        bottom: 20%;
+        border-color: none;
+        border-width: 1px;
+        border-style: none;
+        border-radius:10px ;
+        box-shadow: 1px 1px 4px rgb(146, 146, 146);
+    }
+    .searchbox-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+
+    }
+    .searchbox{
+        text-align: center;
+        height: 30px;
+        width: 250px;
+        border-radius: 15px;
+        border-style: SOLID;
+        border-width: 1px;
+        z-index: auto;
+    }
+    .searchbox-box{
+        position: fixed;
+        left: 46%;
+
+    }
+
+    .submit{
+        border: solid;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        border-style: solid;
+        margin-right: 80px;
+        z-index: 100;
+
+    }
+    .submit:hover{
+        background-color: rgb(182, 182, 255);
+        cursor: pointer;
+        transition: .5s;
+
+    }
+    .button-box{
+
+        left: 0px;
+        margin-top: 3px;
+        margin-left: 229px;
+        width: 30px;
+        z-index:auto;
+    }
+    .date-time-container{
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 25px;
+    }
+    .date{
+        background-color: aqua;
+        width: 50%;
+        text-align: center;
+    }
+    .time{
+        background-color: rgb(230, 170, 170);
+        width: 50%;
+        text-align: center;
+        
+    }
+    .current-weather-info{
+        border-style: none;
+        border-color: rgb(0, 0, 0);
+        border-width: 1px;
+        border-radius:10px ;
+        flex-direction: row;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+        height: 250px;
+        box-shadow: 1px 1px 4px rgb(178, 178, 178);
+        text-shadow: 0px 0px 1px rgb(207, 207, 207);
+
+    }
+    .current-weather-picture{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    .weather-picture{
+        width:200px;
+        height: 190px;
+    }
+    .current-city{
+        display: block;
+        font-weight: bold;
+    }
+    .weather-specifics{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .temperature{
+
+        display: flex;
+        flex-direction: row;
+        margin-top: 6px;
+        font-weight: bold;
+
+    }
+    .divider{
+        margin-top: 8px;
+    }
+
+    .farhenheit{
+        padding-right: 5px;
+        font-size: 30px;
+    }
+    .celcius{
+        padding-left: 5px;
+        font-size: 30px;
+    }
+    </style>
+
     </head>
     <body>
         <div class="weather-tab-container">
