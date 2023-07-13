@@ -46,8 +46,6 @@ def index():
     return render_template("weather.html", weather=weather, celsius=celsius, farh=farh, temperature=temperature, iconexecute=iconexecute)
 
 
-@app.route("/test", methods=['GET'])
-def cityName():
-    city = request.args.get('city')
-    print("city is ", city)
-    return render_template("city.html", cityname=city)
+@app.route("/result/<cityname>")
+def cityName(cityname):
+    return render_template("city.html", cityname=cityname)
