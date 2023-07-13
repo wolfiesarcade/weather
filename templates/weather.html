@@ -37,24 +37,5 @@
             <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
             <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         </div>
-        <script>
-            // Prevent form submission from refreshing the page
-            document.getElementById("weatherForm").addEventListener("submit", function(event) {
-                event.preventDefault();
-                // Submit the form via AJAX
-                fetch("/", {
-                    method: "POST",
-                    body: new FormData(document.getElementById("weatherForm"))
-                })
-                .then(response => response.json())
-                .then(data => {
-                    // Update the weather information on the page
-                    document.querySelector(".weather-info h1").textContent = data.weather.city;
-                    document.querySelector(".weather-info p:nth-of-type(1)").textContent = "Temperature: " + data.weather.Temperature + " K";
-                    document.querySelector(".weather-info p:nth-of-type(2)").textContent = "Humidity: " + data.weather.Humidity;
-                    document.querySelector(".weather-info p:nth-of-type(3)").textContent = "Description: " + data.weather.Description;
-                });
-            });
-        </script>
     </body>
 </html>
