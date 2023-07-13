@@ -1,12 +1,12 @@
 icon_dictionary = {
-    "01d": "./static/sun.png",
-    "02d": "./static/cloudy.png",
-    "03d": "./static/clouds.png",
-    "04d": "./static/clouds.png",
-    "09d": "./static/rain.png",
-    "10d": "./static/rain.png",
-    "11d": "./static/storm.png",
-    "50d": "./static/fog.png",
+    "01d": "./static/images/sun.png",
+    "02d": "./static/images/cloudy.png",
+    "03d": "./static/images/clouds.png",
+    "04d": "./static/images/clouds.png",
+    "09d": "./static/images/rain.png",
+    "10d": "./static/images/rain.png",
+    "11d": "./static/images/storm.png",
+    "50d": "./static/images/fog.png",
 }
 
 
