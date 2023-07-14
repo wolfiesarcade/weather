@@ -3,9 +3,24 @@ body{
     font-family: 'Helvetica Neue', sans-serif;
                                     
 }
+.picture{
+    position: absolute;
+    display: flex;
+    margin-top: -90px;
+    width: 102%;
+    margin-left: -30px;
+    height: 102%;
+
+}
+.background{
+    width: 100%;
+
+}
 .weather-tab-container{
+    position: relative;
+    z-index: 2;
     margin: 0 auto;
-    margin-top:70px;
+    margin-top:90px;
     background-color: rgb(255, 253, 253);
     display: flex;
     flex-direction: column;
@@ -14,8 +29,13 @@ body{
     border-color: none;
     border-width: 1px;
     border-style: none;
-    border-radius:10px ;
-    box-shadow: 1px 1px 4px rgb(146, 146, 146);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0px solid rgba(255, 255, 255, 0.3);
 }
 .searchbox-container{
     position: relative;
@@ -25,28 +45,33 @@ body{
     margin: 0 auto;
     margin-top: 5px;
     margin-bottom: 5px;
+    
 }
 .searchbox{
     box-sizing: border-box;
     border-style: solid;
-    border-color: black;
     border-width: .01px;
     width: calc(100%-40px);
-    border-radius: 15px;
     height: 30px;
     text-align: center;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.17);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 0px solid rgba(255, 255, 255, 0.3);
     /* margin to keep some space between text box and image */
 
 }
 .submit{
-    background-color: red;
-    border: solid;
-    border-width: .1px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    border-style: solid;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0px solid rgba(255, 255, 255, 0.3);
 
 }
 .submit:hover{
@@ -68,28 +93,22 @@ body{
     margin-bottom: 25px;
 }
 .date{
-    background-color: aqua;
-    width: 50%;
+    margin-top: 10px;
+    width: 100%;
     text-align: center;
-}
-.time{
-    background-color: rgb(230, 170, 170);
-    width: 50%;
-    text-align: center;
-    
+    font-weight: bolder;
+    margin-bottom: -10px;
 }
 .current-weather-info{
-    border-style: none;
-    border-color: rgb(0, 0, 0);
-    border-width: 1px;
+    border: none;
+    border-color: rgb(92, 82, 82);
+    border-width: .5px;
     border-radius:10px ;
     flex-direction: row;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 15px;
     height: 250px;
-    box-shadow: 1px 1px 4px rgb(178, 178, 178);
-    text-shadow: 0px 0px 1px rgb(207, 207, 207);
 
 }
 .current-weather-picture{
@@ -115,7 +134,7 @@ body{
 
 }
 .temperature{
-
+    border: none;
     display: flex;
     flex-direction: row;
     margin-top: 6px;
