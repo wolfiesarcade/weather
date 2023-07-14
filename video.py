@@ -8,5 +8,7 @@ video_dictionary = {
     "11d": "/static/images/rain.gif",
     "50d": "/static/images/rain.gif",
 }
-def video(icon_code)->'video':
+
+
+def video(icon_code) -> "video":
     return video_dictionary[icon_code]
