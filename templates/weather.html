@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Weathertrip</title>
         <link rel="stylesheet" href='/static/css/weather.css'/>
 
     </head>
     <body>
+        <div class="picture">
+        <img class="background" src={{videoexecute}} ></div>
         <div class="weather-tab-container">
             <div class="searchbox-">
                 <form id="weatherForm" method="GET" action="/test">
@@ -19,9 +22,8 @@
             </div>
             <div class="date-time-container">
                 <div class="date">
-                    date
+                    {{current_date}}
                 </div>
-                <div class="time">time</div>
             </div>
             <div class="current-weather-info">
                 <div class="current-weather-picture">
