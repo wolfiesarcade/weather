@@ -7,6 +7,14 @@ icon_dictionary = {
     "10d": "./static/images/rain.png",
     "11d": "./static/images/storm.png",
     "50d": "./static/images/fog.png",
+    "01n": "./static/images/sun.png",
+    "02n": "./static/images/cloudy.png",
+    "03n": "./static/images/clouds.png",
+    "04n": "./static/images/clouds.png",
+    "09n": "./static/images/rain.png",
+    "10n": "./static/images/rain.png",
+    "11n": "./static/images/storm.png",
+    "50n": "./static/images/fog.png",
 }
 
 
